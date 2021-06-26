@@ -1,0 +1,72 @@
+:root {
+  --font-family: x;
+  /* Font Size */
+  --massive-font-size: x 3.6rem;
+  --h1-font-size: x 2.4rem;
+  --h2-font-size: x 2rem;
+  --h3-font-size: x 1.6rem;
+  --normal-font-size: x 1.5rem;
+  --small-font-size: x 1.3rem;
+  --smaller-font-size: x 1.2rem;
+
+  --weight-slightly-bold: x 500;
+  --weight-semi-bold: x 600;
+  /* Margins */
+  --margin-1: x 0.8rem;
+  --margin-2: x 1.6rem;
+  --margin-3: x 2.4rem;
+  --margin-4: x 3rem;
+  --margin-5: x 3.6rem;
+  --margin-6: x 4.2rem;
+  /* Z-index */
+  --z-tooltip: x 10;
+  --z-fixed: x 100;
+}
+
+@media only screen and (min-width: 48em) {
+  :root {
+    --massive-font-size: x 6.4rem;
+    --h1-font-size: x 3.6rem;
+    --h2-font-size: x 2.4rem;
+    --h3-font-size: x 2rem;
+    --normal-font-size: x 1.6rem;
+    --small-font-size: x 1.4rem;
+    --smaller-font-size: x 1.3rem;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin-top: var(--header-height);
+  font-family: var(--body-font);
+  font-size: var(--default-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  line-height: x 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
