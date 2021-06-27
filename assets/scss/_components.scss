@@ -1,0 +1,40 @@
+.section {
+  padding: x 6.4rem 0 3.2rem;
+}
+
+.section-title,
+.section-subtitle {
+  text-align: center;
+}
+
+.section-title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--margin-3);
+}
+
+.section-subtitle {
+  display: block;
+  color: var(--first-color);
+  font-weight: var(--weight-slightly-bold);
+  margin-bottom: var(--margin-1);
+}
+
+.container {
+  width: clamp(0, 90%, 96rem);
+  height: 100%;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  gap: 2.4rem;
+}
