@@ -11,7 +11,7 @@
   --container-color: hsl(0, 0%, 100%);
   /* Typography */
   --font-family: "Poppins", Arial, Helvetica, sans-serif;
-  --massive-font-size: 3.6rem;
+  --icon-font-size: 4.8rem;
   --h1-font-size: 2.4rem;
   --h2-font-size: 2rem;
   --h3-font-size: 1.6rem;
@@ -34,7 +34,7 @@
 
 @media only screen and (min-width: 48em) {
   :root {
-    --massive-font-size: 6.4rem;
+    --massive-font-size: 7.2rem;
     --h1-font-size: 3.6rem;
     --h2-font-size: 2.4rem;
     --h3-font-size: 2rem;
@@ -72,11 +72,6 @@ ul {
 a {
   text-decoration: none;
   color: var(--text-color);
-  font-weight: var(--weight-medium);
-  transition: 0.3s;
-}
-a:hover {
-  color: var(--primary-color);
 }
 
 img {
@@ -117,12 +112,24 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
 }
 
 .grid {
   display: grid;
   gap: 2.4rem;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: -6rem;
+  right: 1rem;
+  font-size: var(--icon-font-size);
+  color: var(--primary-color-dark);
+  z-index: var(--z-tooltip);
+  transition: 0.4s;
+}
+.scroll-top.visible {
+  bottom: 1rem;
 }
 
 .header {
@@ -161,7 +168,7 @@ img {
   z-index: var(--z-fixed);
 }
 .nav__menu.show {
-  top: var(--header-height);
+  top: 7.4rem;
 }
 .nav__item {
   margin-bottom: var(--margin-2);
@@ -171,6 +178,13 @@ img {
   font-weight: var(--weight-medium);
   cursor: pointer;
   color: var(--text-color);
+}
+.nav__link {
+  font-weight: var(--weight-medium);
+  transition: 0.4s;
+}
+.nav__link:hover {
+  color: var(--primary-color);
 }
 .nav__link.active {
   color: var(--primary-color);

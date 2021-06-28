@@ -19,15 +19,15 @@ const scrollActive = () => {
   sections.forEach((section) => {
     const sectionId = section.getAttribute("id");
     const sectionHeight = section.offsetHeight;
-    const sectionTop = section.offsetTop;
+    const sectionTop = section.offsetTop - 100;
 
-    this.scrollY > sectionTop && this.scrollY < sectionTop + sectionHeight
+    this.scrollY >= sectionTop && this.scrollY < sectionTop + sectionHeight
       ? document
-          .querySelector(".nav__menu a[href=" + sectionId + "]")
+          .querySelector(".nav__menu a[href*=" + sectionId + "]")
           .classList.add("active")
       : document
-          .querySelector(".nav__menu a[href=" + sectionId + "]")
-          .classList.add("active");
+          .querySelector(".nav__menu a[href*=" + sectionId + "]")
+          .classList.remove("active");
   });
 };
 
@@ -35,9 +35,18 @@ window.addEventListener("scroll", scrollActive);
 
 const scrollHeader = () => {
   const header = document.getElementById("header");
-  this.scrollY > 200
+  this.scrollY > 100
     ? header.classList.add("scroll-header")
     : header.classList.remove("scroll-header");
 };
 
 window.addEventListener("scroll", scrollHeader);
+
+const scrollTop = () => {
+  const scrollTop = document.getElementById("scroll-top");
+  this.scrollY > 600
+    ? scrollTop.classList.add("visible")
+    : scrollTop.classList.remove("visible");
+};
+
+window.addEventListener("scroll", scrollTop);

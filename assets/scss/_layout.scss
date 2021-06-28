@@ -1,3 +1,17 @@
+.scroll-top {
+  position: fixed;
+  bottom: -6rem;
+  right: 1rem;
+  font-size: var(--icon-font-size);
+  color: var(--primary-color-dark);
+  z-index: var(--z-tooltip);
+  transition: 0.4s;
+
+  &.visible {
+    bottom: 1rem;
+  }
+}
+
 .header {
   width: 100%;
   position: sticky;
@@ -38,7 +52,7 @@
     z-index: var(--z-fixed);
 
     &.show {
-      top: var(--header-height);
+      top: 7.4rem;
     }
   }
 
@@ -54,6 +68,12 @@
   }
 
   &__link {
+    font-weight: var(--weight-medium);
+    transition: 0.4s;
+
+    &:hover {
+      color: var(--primary-color);
+    }
     &.active {
       color: var(--primary-color);
     }
