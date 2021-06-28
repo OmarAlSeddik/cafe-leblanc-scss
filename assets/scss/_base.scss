@@ -1,4 +1,14 @@
 :root {
+  --header-height: 3rem;
+  /* Colors */
+  --primary-color: hsl(24, 26%, 45%);
+  --primary-color-darker: hsl(24, 34%, 33%);
+  --title-color: hsl(0, 0%, 22%);
+  --text-color: hsl(0, 0%, 44%);
+  --text-color-light: hsl(0, 0%, 66%);
+  --body-color: hsl(0, 0%, 95%);
+  --container-color: hsl(0, 0%, 100%);
+  /* Typography */
   --font-family: "Lato", Arial, Helvetica, sans-serif;
   /* Font Size */
   --massive-font-size: 3.6rem;

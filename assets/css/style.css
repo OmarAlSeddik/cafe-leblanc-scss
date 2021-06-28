@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap");
 :root {
+  --header-height: 3rem;
+  /* Colors */
+  --primary-color: hsl(24, 26%, 45%);
+  --primary-color-darker: hsl(24, 34%, 33%);
+  --title-color: hsl(0, 0%, 22%);
+  --text-color: hsl(0, 0%, 44%);
+  --text-color-light: hsl(0, 0%, 66%);
+  --body-color: hsl(0, 0%, 95%);
+  --container-color: hsl(0, 0%, 100%);
+  /* Typography */
   --font-family: "Lato", Arial, Helvetica, sans-serif;
   /* Font Size */
   --massive-font-size: 3.6rem;
@@ -97,7 +107,6 @@ img {
   width: clamp(0, 90%, 96rem);
   height: 100%;
   margin: 0 auto;
-  overflow: auto;
 }
 
 .flex {
@@ -110,4 +119,15 @@ img {
 .grid {
   display: grid;
   gap: 2.4rem;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+}
+
+.nav {
+  max-width: 102.4rem;
+  height: var(--header-height);
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */

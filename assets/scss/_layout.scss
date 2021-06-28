@@ -1,0 +1,10 @@
+.header {
+  width: 100%;
+  position: fixed;
+}
+
+.nav {
+  max-width: 102.4rem;
+  height: var(--header-height);
+  justify-content: space-between;
+}
