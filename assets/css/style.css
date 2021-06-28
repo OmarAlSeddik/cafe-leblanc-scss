@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Poppins:wght@400;500;600;700&display=swap");
 :root {
-  --header-height: 4.8rem;
+  --header-height: 6.4rem;
   /* Colors */
   --primary-color: hsl(24, 26%, 45%);
   --primary-color-dark: hsl(24, 34%, 33%);
@@ -58,7 +58,6 @@ html {
 }
 
 body {
-  margin-top: var(--header-height);
   font-family: var(--font-family);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
@@ -128,11 +127,15 @@ img {
 
 .header {
   width: 100%;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
   background-color: var(--body-color);
+  transition: 0.4s;
+}
+.header.scroll-header {
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
 }
 
 .nav {
@@ -141,7 +144,7 @@ img {
 }
 .nav__logo, .nav__logo:hover {
   font-family: "Oleo Script Swash Caps";
-  font-size: var(--h2-font-size);
+  font-size: var(--h1-font-size);
   color: var(--primary-color-dark);
 }
 .nav__menu {
@@ -164,8 +167,11 @@ img {
   margin-bottom: var(--margin-2);
 }
 .nav__toggle {
-  font-size: var(--h2-font-size);
+  font-size: var(--h1-font-size);
   font-weight: var(--weight-medium);
   cursor: pointer;
   color: var(--text-color);
+}
+.nav__link.active {
+  color: var(--primary-color);
 }/*# sourceMappingURL=style.css.map */

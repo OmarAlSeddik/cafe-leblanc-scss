@@ -1,10 +1,15 @@
 .header {
   width: 100%;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
   background-color: var(--body-color);
+  transition: 0.4s;
+
+  &.scroll-header {
+    box-shadow: 0 0.4rem 0.4rem hsla(0, 0%, 0%, 0.4);
+  }
 }
 
 .nav {
@@ -15,7 +20,7 @@
   &__logo,
   &__logo:hover {
     font-family: "Oleo Script Swash Caps";
-    font-size: var(--h2-font-size);
+    font-size: var(--h1-font-size);
     color: var(--primary-color-dark);
   }
 
@@ -42,9 +47,15 @@
   }
 
   &__toggle {
-    font-size: var(--h2-font-size);
+    font-size: var(--h1-font-size);
     font-weight: var(--weight-medium);
     cursor: pointer;
     color: var(--text-color);
+  }
+
+  &__link {
+    &.active {
+      color: var(--primary-color);
+    }
   }
 }

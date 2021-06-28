@@ -1,5 +1,5 @@
 :root {
-  --header-height: 4.8rem;
+  --header-height: 6.4rem;
   /* Colors */
   --primary-color: hsl(24, 26%, 45%);
   --primary-color-dark: hsl(24, 34%, 33%);
@@ -61,7 +61,7 @@ html {
 }
 
 body {
-  margin-top: var(--header-height);
+  // margin-top: var(--header-height);
   font-family: var(--font-family);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
