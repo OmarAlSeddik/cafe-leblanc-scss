@@ -16,14 +16,15 @@
 .section-subtitle {
   display: block;
   color: var(--first-color);
-  font-weight: var(--weight-slightly-bold);
+  font-weight: var(--weight-medium);
   margin-bottom: var(--margin-1);
 }
 
 .container {
-  width: clamp(0, 90%, 96rem);
+  width: 90%;
   height: 100%;
   margin: 0 auto;
+  overflow: auto;
 }
 
 .flex {

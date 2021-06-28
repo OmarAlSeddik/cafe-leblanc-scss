@@ -1,10 +1,50 @@
 .header {
   width: 100%;
   position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
 }
 
 .nav {
-  max-width: 102.4rem;
+  // max-width: 102.4rem;
   height: var(--header-height);
   justify-content: space-between;
+
+  &__logo,
+  &__logo:hover {
+    font-family: "Oleo Script Swash Caps";
+    font-size: var(--h2-font-size);
+    color: var(--primary-color-dark);
+  }
+
+  &__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    padding: 2.4rem 0 1.6rem;
+    text-align: center;
+    border-radius: 0 0 1.6rem 1.6rem;
+    background-color: var(--body-color);
+    box-shadow: 0 0.4rem 0.4rem hsla(0, 0%, 0%, 0.4);
+    transition: 0.4s;
+    z-index: var(--z-fixed);
+
+    &.show {
+      top: var(--header-height);
+    }
+  }
+
+  &__item {
+    margin-bottom: var(--margin-2);
+  }
+
+  &__toggle {
+    font-size: var(--h2-font-size);
+    font-weight: var(--weight-medium);
+    cursor: pointer;
+    color: var(--text-color);
+  }
 }

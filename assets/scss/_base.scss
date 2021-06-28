@@ -1,16 +1,17 @@
 :root {
-  --header-height: 3rem;
+  --header-height: 4.8rem;
   /* Colors */
   --primary-color: hsl(24, 26%, 45%);
-  --primary-color-darker: hsl(24, 34%, 33%);
+  --primary-color-dark: hsl(24, 34%, 33%);
+
   --title-color: hsl(0, 0%, 22%);
   --text-color: hsl(0, 0%, 44%);
   --text-color-light: hsl(0, 0%, 66%);
   --body-color: hsl(0, 0%, 95%);
   --container-color: hsl(0, 0%, 100%);
   /* Typography */
-  --font-family: "Lato", Arial, Helvetica, sans-serif;
-  /* Font Size */
+  --font-family: "Poppins", Arial, Helvetica, sans-serif;
+
   --massive-font-size: 3.6rem;
   --h1-font-size: 2.4rem;
   --h2-font-size: 2rem;
@@ -18,8 +19,8 @@
   --normal-font-size: 1.5rem;
   --small-font-size: 1.3rem;
   --smaller-font-size: 1.2rem;
-  /* Font Weight */
-  --weight-slightly-bold: 500;
+
+  --weight-medium: 500;
   --weight-semi-bold: 600;
   /* Margins */
   --margin-1: 0.8rem;
@@ -28,7 +29,7 @@
   --margin-4: 3rem;
   --margin-5: 3.6rem;
   --margin-6: 4.2rem;
-  /* Z-index */
+  /* Z Index */
   --z-tooltip: 10;
   --z-fixed: 100;
 }
@@ -61,7 +62,7 @@ html {
 
 body {
   margin-top: var(--header-height);
-  font-family: var(--body-font);
+  font-family: var(--font-family);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
@@ -74,6 +75,13 @@ ul {
 
 a {
   text-decoration: none;
+  color: var(--text-color);
+  font-weight: var(--weight-medium);
+  transition: 0.3s;
+
+  &:hover {
+    color: var(--primary-color);
+  }
 }
 
 img {

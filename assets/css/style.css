@@ -1,17 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Poppins:wght@400;500;600;700&display=swap");
 :root {
-  --header-height: 3rem;
+  --header-height: 4.8rem;
   /* Colors */
   --primary-color: hsl(24, 26%, 45%);
-  --primary-color-darker: hsl(24, 34%, 33%);
+  --primary-color-dark: hsl(24, 34%, 33%);
   --title-color: hsl(0, 0%, 22%);
   --text-color: hsl(0, 0%, 44%);
   --text-color-light: hsl(0, 0%, 66%);
   --body-color: hsl(0, 0%, 95%);
   --container-color: hsl(0, 0%, 100%);
   /* Typography */
-  --font-family: "Lato", Arial, Helvetica, sans-serif;
-  /* Font Size */
+  --font-family: "Poppins", Arial, Helvetica, sans-serif;
   --massive-font-size: 3.6rem;
   --h1-font-size: 2.4rem;
   --h2-font-size: 2rem;
@@ -19,8 +18,7 @@
   --normal-font-size: 1.5rem;
   --small-font-size: 1.3rem;
   --smaller-font-size: 1.2rem;
-  /* Font Weight */
-  --weight-slightly-bold: 500;
+  --weight-medium: 500;
   --weight-semi-bold: 600;
   /* Margins */
   --margin-1: 0.8rem;
@@ -29,7 +27,7 @@
   --margin-4: 3rem;
   --margin-5: 3.6rem;
   --margin-6: 4.2rem;
-  /* Z-index */
+  /* Z Index */
   --z-tooltip: 10;
   --z-fixed: 100;
 }
@@ -61,7 +59,7 @@ html {
 
 body {
   margin-top: var(--header-height);
-  font-family: var(--body-font);
+  font-family: var(--font-family);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
@@ -74,6 +72,12 @@ ul {
 
 a {
   text-decoration: none;
+  color: var(--text-color);
+  font-weight: var(--weight-medium);
+  transition: 0.3s;
+}
+a:hover {
+  color: var(--primary-color);
 }
 
 img {
@@ -99,14 +103,15 @@ img {
 .section-subtitle {
   display: block;
   color: var(--first-color);
-  font-weight: var(--weight-slightly-bold);
+  font-weight: var(--weight-medium);
   margin-bottom: var(--margin-1);
 }
 
 .container {
-  width: clamp(0, 90%, 96rem);
+  width: 90%;
   height: 100%;
   margin: 0 auto;
+  overflow: auto;
 }
 
 .flex {
@@ -124,10 +129,43 @@ img {
 .header {
   width: 100%;
   position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
 }
 
 .nav {
-  max-width: 102.4rem;
   height: var(--header-height);
   justify-content: space-between;
+}
+.nav__logo, .nav__logo:hover {
+  font-family: "Oleo Script Swash Caps";
+  font-size: var(--h2-font-size);
+  color: var(--primary-color-dark);
+}
+.nav__menu {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  padding: 2.4rem 0 1.6rem;
+  text-align: center;
+  border-radius: 0 0 1.6rem 1.6rem;
+  background-color: var(--body-color);
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+  transition: 0.4s;
+  z-index: var(--z-fixed);
+}
+.nav__menu.show {
+  top: var(--header-height);
+}
+.nav__item {
+  margin-bottom: var(--margin-2);
+}
+.nav__toggle {
+  font-size: var(--h2-font-size);
+  font-weight: var(--weight-medium);
+  cursor: pointer;
+  color: var(--text-color);
 }/*# sourceMappingURL=style.css.map */
