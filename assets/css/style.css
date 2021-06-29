@@ -156,14 +156,14 @@ img {
 .scroll-top {
   position: fixed;
   bottom: -6rem;
-  right: 1rem;
+  right: 2rem;
   font-size: var(--icon-font-size);
   color: var(--primary-color);
   z-index: var(--z-tooltip);
   transition: 0.4s;
 }
 .scroll-top.visible {
-  bottom: 1rem;
+  bottom: 2rem;
 }
 @media (hover: hover) and (pointer: fine) {
   .scroll-top:hover {
@@ -346,6 +346,11 @@ img {
   font-size: var(--h1-font-size);
   color: var(--title-color);
   margin-right: var(--margin-2);
+}
+@media (hover: hover) and (pointer: fine) {
+  .footer__social:hover {
+    color: var(--primary-color);
+  }
 }
 .footer__copy {
   text-align: center;

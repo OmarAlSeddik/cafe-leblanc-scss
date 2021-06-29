@@ -150,6 +150,11 @@
     font-size: var(--h1-font-size);
     color: var(--title-color);
     margin-right: var(--margin-2);
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
   }
 
   &__copy {
