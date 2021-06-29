@@ -2,7 +2,8 @@
 :root {
   --header-height: 6.4rem;
   /* Colors */
-  --primary-color: hsl(24, 34%, 33%);
+  --primary-color: hsl(23, 34%, 33%);
+  --secondary-color: hsl(203, 34%, 33%);
   --title-color: hsl(0, 0%, 22%);
   --text-color: hsl(0, 0%, 33%);
   --text-color-light: hsl(0, 0%, 44%);
@@ -124,7 +125,7 @@ img {
   background-color: var(--primary-color);
   color: var(--container-color);
   padding: 1.2rem 1.6rem;
-  border-radius: 0.8rem;
+  border-radius: 2rem;
   transition: 0.4s;
 }
 
@@ -161,6 +162,10 @@ img {
   font-family: "Oleo Script Swash Caps";
   font-size: var(--h1-font-size);
   color: var(--primary-color);
+}
+.header .nav__image {
+  width: var(--h1-font-size);
+  height: var(--h1-font-size);
 }
 .header .nav__menu {
   position: fixed;
@@ -251,4 +256,22 @@ img {
   font-size: var(--h3-font-size);
   color: var(--title-color);
   margin-bottom: var(--margin-1);
+}
+
+.app__data {
+  text-align: center;
+}
+.app__description {
+  margin-bottom: var(--margin-5);
+}
+.app__store {
+  width: 30rem;
+  margin: var(--margin-2);
+}
+
+.contact__data {
+  text-align: center;
+}
+.contact__description {
+  margin-bottom: var(--margin-3);
 }/*# sourceMappingURL=style.css.map */

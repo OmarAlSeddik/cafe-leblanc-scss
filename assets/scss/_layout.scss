@@ -39,6 +39,11 @@
       color: var(--primary-color);
     }
 
+    &__image {
+      width: var(--h1-font-size);
+      height: var(--h1-font-size);
+    }
+
     &__menu {
       position: fixed;
       top: -100%;
@@ -152,5 +157,32 @@
     font-size: var(--h3-font-size);
     color: var(--title-color);
     margin-bottom: var(--margin-1);
+  }
+}
+
+//App Section Styling
+.app {
+  &__data {
+    text-align: center;
+  }
+
+  &__description {
+    margin-bottom: var(--margin-5);
+  }
+
+  &__store {
+    width: 30rem;
+    margin: var(--margin-2);
+  }
+}
+
+//Contact Section Styling
+.contact {
+  &__data {
+    text-align: center;
+  }
+
+  &__description {
+    margin-bottom: var(--margin-3);
   }
 }
