@@ -1,5 +1,5 @@
 .section {
-  padding: x 6.4rem 0 3.2rem;
+  padding: 6.4rem 0 3.2rem;
 }
 
 .section-title,
@@ -15,7 +15,8 @@
 
 .section-subtitle {
   display: block;
-  color: var(--first-color);
+  color: var(--primary-color);
+  font-size: var(--h2-font-size);
   font-weight: var(--weight-medium);
   margin-bottom: var(--margin-1);
 }
@@ -36,4 +37,13 @@
 .grid {
   display: grid;
   gap: 2.4rem;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--container-color);
+  padding: 1.2rem 1.6rem;
+  border-radius: 0.8rem;
+  transition: 0.4s;
 }

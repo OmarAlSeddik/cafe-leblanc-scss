@@ -2,11 +2,10 @@
 :root {
   --header-height: 6.4rem;
   /* Colors */
-  --primary-color: hsl(24, 26%, 45%);
-  --primary-color-dark: hsl(24, 34%, 33%);
+  --primary-color: hsl(24, 34%, 33%);
   --title-color: hsl(0, 0%, 22%);
-  --text-color: hsl(0, 0%, 44%);
-  --text-color-light: hsl(0, 0%, 66%);
+  --text-color: hsl(0, 0%, 33%);
+  --text-color-light: hsl(0, 0%, 44%);
   --body-color: hsl(0, 0%, 95%);
   --container-color: hsl(0, 0%, 100%);
   /* Typography */
@@ -80,7 +79,7 @@ img {
 }
 
 .section {
-  padding: x 6.4rem 0 3.2rem;
+  padding: 6.4rem 0 3.2rem;
 }
 
 .section-title,
@@ -96,7 +95,8 @@ img {
 
 .section-subtitle {
   display: block;
-  color: var(--first-color);
+  color: var(--primary-color);
+  font-size: var(--h2-font-size);
   font-weight: var(--weight-medium);
   margin-bottom: var(--margin-1);
 }
@@ -119,12 +119,21 @@ img {
   gap: 2.4rem;
 }
 
+.button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--container-color);
+  padding: 1.2rem 1.6rem;
+  border-radius: 0.8rem;
+  transition: 0.4s;
+}
+
 .scroll-top {
   position: fixed;
   bottom: -6rem;
   right: 1rem;
   font-size: var(--icon-font-size);
-  color: var(--primary-color-dark);
+  color: var(--primary-color);
   z-index: var(--z-tooltip);
   transition: 0.4s;
 }
@@ -144,17 +153,16 @@ img {
 .header.scroll-header {
   box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
 }
-
-.nav {
+.header .nav {
   height: var(--header-height);
   justify-content: space-between;
 }
-.nav__logo, .nav__logo:hover {
+.header .nav__logo, .header .nav__logo:hover {
   font-family: "Oleo Script Swash Caps";
   font-size: var(--h1-font-size);
-  color: var(--primary-color-dark);
+  color: var(--primary-color);
 }
-.nav__menu {
+.header .nav__menu {
   position: fixed;
   top: -100%;
   left: 0;
@@ -167,25 +175,80 @@ img {
   transition: 0.4s;
   z-index: var(--z-fixed);
 }
-.nav__menu.show {
+.header .nav__menu.show {
   top: 7.4rem;
 }
-.nav__item {
+.header .nav__item {
   margin-bottom: var(--margin-2);
 }
-.nav__toggle {
+.header .nav__toggle {
   font-size: var(--h1-font-size);
   font-weight: var(--weight-medium);
   cursor: pointer;
   color: var(--text-color);
 }
-.nav__link {
+.header .nav__link {
   font-weight: var(--weight-medium);
   transition: 0.4s;
 }
-.nav__link:hover {
+.header .nav__link:hover {
   color: var(--primary-color);
 }
-.nav__link.active {
+.header .nav__link.active {
   color: var(--primary-color);
+}
+
+.home__container {
+  height: calc(100vh - var(--header-height));
+  align-content: center;
+}
+.home__data {
+  text-align: center;
+}
+.home__title {
+  font-family: "Oleo Script Swash Caps";
+  font-size: var(--icon-font-size);
+  color: var(--primary-color);
+  margin-bottom: var(--margin-1);
+}
+.home__subtitle {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--margin-4);
+}
+.home__image {
+  width: 30rem;
+  border-radius: 1rem;
+  justify-self: center;
+}
+
+.about__data {
+  text-align: center;
+}
+.about__description {
+  margin-bottom: var(--margin-3);
+}
+.about__image {
+  width: 30rem;
+  border-radius: 1rem;
+  justify-self: center;
+}
+
+.services__container {
+  row-gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+}
+.services__content {
+  text-align: center;
+}
+.services__image {
+  width: 6.4rem;
+  height: 6.4rem;
+  fill: var(--primary-color);
+  margin-bottom: var(--margin-2);
+}
+.services__title {
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--margin-1);
 }/*# sourceMappingURL=style.css.map */
