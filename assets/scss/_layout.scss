@@ -81,6 +81,11 @@
     margin-bottom: var(--margin-5);
   }
 
+  &__stores {
+    flex-direction: column;
+    justify-self: center;
+  }
+
   &__store {
     width: 30rem;
     margin: var(--margin-2);
@@ -95,6 +100,12 @@
 
   &__description {
     margin-bottom: var(--margin-3);
+  }
+
+  &__image {
+    width: 30rem;
+    border-radius: 1rem;
+    justify-self: center;
   }
 }
 
@@ -142,12 +153,19 @@
 
 @media only screen and (min-width: 36em) {
   .home__container,
-  .about__container {
+  .about__container,
+  .app__container,
+  .contact__container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
   }
 
   .about__image {
+    width: 38rem;
+    order: -1;
+  }
+
+  .contact__image {
     width: 38rem;
     order: -1;
   }
@@ -179,6 +197,10 @@
   }
 
   .about__image {
+    width: 50rem;
+  }
+
+  .contact__image {
     width: 50rem;
   }
 

@@ -1,22 +1,23 @@
 :root {
   --header-height: 6.4rem;
   /* Colors */
-  --primary-color: hsl(23, 34%, 33%);
-  // --secondary-color: hsl(203, 34%, 33%);
-  // --gradient-color: linear-gradient(
-  //   to right bottom,
-  //   #714e38,
-  //   #78494e,
-  //   #6c4c65,
-  //   #535472,
-  //   #385b71
-  // );
+  --primary-color: hsl(22, 34%, 33%);
 
   --title-color: hsl(0, 0%, 22%);
   --text-color: hsl(0, 0%, 33%);
   --text-color-light: hsl(0, 0%, 44%);
   --body-color: hsl(0, 0%, 95%);
   --container-color: hsl(0, 0%, 100%);
+
+  body.dark-theme {
+    --primary-color: hsl(22, 34%, 67%);
+    --title-color: hsl(0, 0%, 78%);
+    --text-color: hsl(0, 0%, 67%);
+    --text-color-light: hsl(0, 0%, 56%);
+    --body-color: hsl(0, 0%, 5%);
+    --container-color: hsl(0, 0%, 0%);
+  }
+
   /* Typography */
   --font-family: "Poppins", Arial, Helvetica, sans-serif;
 

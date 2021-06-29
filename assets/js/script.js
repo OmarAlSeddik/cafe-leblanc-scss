@@ -50,3 +50,13 @@ const scrollTop = () => {
 };
 
 window.addEventListener("scroll", scrollTop);
+//
+const body = document.body;
+const themeButton = document.getElementById("theme-button");
+
+const toggleDarkTheme = () => {
+  body.classList.toggle("dark-theme");
+  themeButton.classList.toggle("bx-sun");
+};
+
+themeButton.addEventListener("click", toggleDarkTheme);

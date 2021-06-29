@@ -2,7 +2,7 @@
 :root {
   --header-height: 6.4rem;
   /* Colors */
-  --primary-color: hsl(23, 34%, 33%);
+  --primary-color: hsl(22, 34%, 33%);
   --title-color: hsl(0, 0%, 22%);
   --text-color: hsl(0, 0%, 33%);
   --text-color-light: hsl(0, 0%, 44%);
@@ -29,6 +29,14 @@
   /* Z Index */
   --z-tooltip: 10;
   --z-fixed: 100;
+}
+:root body.dark-theme {
+  --primary-color: hsl(22, 34%, 67%);
+  --title-color: hsl(0, 0%, 78%);
+  --text-color: hsl(0, 0%, 67%);
+  --text-color-light: hsl(0, 0%, 56%);
+  --body-color: hsl(0, 0%, 5%);
+  --container-color: hsl(0, 0%, 0%);
 }
 
 @media only screen and (min-width: 48em) {
@@ -128,6 +136,12 @@ img {
   transition: 0.4s;
 }
 
+.theme-button {
+  color: var(--text-color);
+  font-size: var(--h1-font-size);
+  cursor: pointer;
+}
+
 .scroll-top {
   position: fixed;
   bottom: -6rem;
@@ -157,8 +171,10 @@ img {
   height: var(--header-height);
   justify-content: space-between;
 }
-.header .nav__image {
-  width: var(--h1-font-size);
+.header .nav__logo {
+  font-family: "Oleo Script Swash Caps";
+  font-size: var(--h2-font-size);
+  color: var(--primary-color);
 }
 @media only screen and (max-width: 48em) {
   .header .nav__menu {
@@ -261,6 +277,10 @@ img {
 .app__description {
   margin-bottom: var(--margin-5);
 }
+.app__stores {
+  flex-direction: column;
+  justify-self: center;
+}
 .app__store {
   width: 30rem;
   margin: var(--margin-2);
@@ -271,6 +291,11 @@ img {
 }
 .contact__description {
   margin-bottom: var(--margin-3);
+}
+.contact__image {
+  width: 30rem;
+  border-radius: 1rem;
+  justify-self: center;
 }
 
 .footer__container {
@@ -308,12 +333,19 @@ img {
 
 @media only screen and (min-width: 36em) {
   .home__container,
-.about__container {
+.about__container,
+.app__container,
+.contact__container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
   }
 
   .about__image {
+    width: 38rem;
+    order: -1;
+  }
+
+  .contact__image {
     width: 38rem;
     order: -1;
   }
@@ -343,6 +375,10 @@ img {
   }
 
   .about__image {
+    width: 50rem;
+  }
+
+  .contact__image {
     width: 50rem;
   }
 
