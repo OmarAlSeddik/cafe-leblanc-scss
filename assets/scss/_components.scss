@@ -43,7 +43,7 @@
   display: inline-block;
   background-color: var(--primary-color);
   color: var(--container-color);
-  padding: 1.2rem 1.6rem;
-  border-radius: 2rem;
+  padding: var(--small-font-size) var(--h3-font-size);
+  border-radius: var(--h2-font-size);
   transition: 0.4s;
 }
