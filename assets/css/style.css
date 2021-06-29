@@ -3,7 +3,6 @@
   --header-height: 6.4rem;
   /* Colors */
   --primary-color: hsl(23, 34%, 33%);
-  --secondary-color: hsl(203, 34%, 33%);
   --title-color: hsl(0, 0%, 22%);
   --text-color: hsl(0, 0%, 33%);
   --text-color-light: hsl(0, 0%, 44%);
@@ -158,14 +157,8 @@ img {
   height: var(--header-height);
   justify-content: space-between;
 }
-.header .nav__logo, .header .nav__logo:hover {
-  font-family: "Oleo Script Swash Caps";
-  font-size: var(--h1-font-size);
-  color: var(--primary-color);
-}
 .header .nav__image {
   width: var(--h1-font-size);
-  height: var(--h1-font-size);
 }
 .header .nav__menu {
   position: fixed;
@@ -274,4 +267,33 @@ img {
 }
 .contact__description {
   margin-bottom: var(--margin-3);
+}
+
+.footer__container {
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  row-gap: 3.2rem;
+}
+.footer__logo {
+  font-family: "Oleo Script Swash Caps";
+  font-size: var(--h3-font-size);
+  color: var(--primary-color);
+}
+.footer__title {
+  margin-top: var(--margin-4);
+}
+.footer__description {
+  display: block;
+  font-size: var(--small-font-size);
+  margin: 0.4rem 0 var(--margin-3);
+}
+.footer__social {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  margin-right: var(--margin-2);
+}
+.footer__copy {
+  text-align: center;
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  margin-top: var(--margin-6);
 }/*# sourceMappingURL=style.css.map */
