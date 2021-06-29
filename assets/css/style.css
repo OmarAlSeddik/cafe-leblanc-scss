@@ -156,14 +156,14 @@ img {
 .scroll-top {
   position: fixed;
   bottom: -6rem;
-  right: 2rem;
+  right: 3rem;
   font-size: var(--icon-font-size);
   color: var(--primary-color);
   z-index: var(--z-tooltip);
   transition: 0.4s;
 }
 .scroll-top.visible {
-  bottom: 2rem;
+  bottom: 3rem;
 }
 @media (hover: hover) and (pointer: fine) {
   .scroll-top:hover {
