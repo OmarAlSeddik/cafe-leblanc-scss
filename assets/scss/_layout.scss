@@ -139,6 +139,13 @@
     flex-direction: column;
   }
 
+  &__link {
+    transition: 0.4s;
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
   &__social {
     font-size: var(--h1-font-size);
     color: var(--title-color);

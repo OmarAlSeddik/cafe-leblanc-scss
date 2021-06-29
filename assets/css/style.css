@@ -136,6 +136,16 @@ img {
   border-radius: var(--h2-font-size);
   transition: 0.4s;
 }
+@media (hover: hover) and (pointer: fine) {
+  .button:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+  }
+}
+.button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
 
 .theme-button {
   color: var(--text-color);
@@ -154,6 +164,11 @@ img {
 }
 .scroll-top.visible {
   bottom: 1rem;
+}
+@media (hover: hover) and (pointer: fine) {
+  .scroll-top:hover {
+    opacity: 0.5;
+  }
 }
 
 .header {
@@ -320,6 +335,12 @@ img {
 }
 .footer__list {
   flex-direction: column;
+}
+.footer__link {
+  transition: 0.4s;
+}
+.footer__link:hover {
+  color: var(--primary-color);
 }
 .footer__social {
   font-size: var(--h1-font-size);

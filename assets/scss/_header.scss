@@ -10,6 +10,11 @@
   &.visible {
     bottom: 1rem;
   }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 }
 
 .header {

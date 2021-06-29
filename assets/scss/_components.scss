@@ -47,6 +47,18 @@
   padding: var(--small-font-size) var(--h3-font-size);
   border-radius: var(--h2-font-size);
   transition: 0.4s;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: translateY(-0.5rem);
+      box-shadow: 0 0.4rem 0.4rem hsla(0, 0, 0, 0.4);
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
 }
 
 .theme-button {
