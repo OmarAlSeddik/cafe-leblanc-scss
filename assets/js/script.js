@@ -85,3 +85,18 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+
+//ScrollReveal
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "5rem",
+  duration: 2000,
+  reset: true,
+});
+
+sr.reveal(
+  `.home__data, .home__image, .about__data, .about__image, .services__content, .app__data, .app__stores, .contact__data, .contact__image, .footer__content`,
+  {
+    interval: 200,
+  }
+);

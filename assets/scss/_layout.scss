@@ -112,8 +112,11 @@
 //Footer Section Styling
 .footer {
   &__container {
-    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-    row-gap: 3.2rem;
+    flex-direction: column;
+  }
+
+  &__content {
+    text-align: center;
   }
 
   &__logo {
@@ -134,7 +137,6 @@
 
   &__list {
     flex-direction: column;
-    align-items: flex-start;
   }
 
   &__social {
@@ -188,6 +190,11 @@
 
   .services__container {
     margin-top: var(--margin-6);
+  }
+
+  .footer__container {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 

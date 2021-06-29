@@ -120,6 +120,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
 }
 
 .grid {
@@ -299,8 +300,10 @@ img {
 }
 
 .footer__container {
-  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-  row-gap: 3.2rem;
+  flex-direction: column;
+}
+.footer__content {
+  text-align: center;
 }
 .footer__logo {
   font-family: "Oleo Script Swash Caps";
@@ -317,7 +320,6 @@ img {
 }
 .footer__list {
   flex-direction: column;
-  align-items: flex-start;
 }
 .footer__social {
   font-size: var(--h1-font-size);
@@ -367,6 +369,11 @@ img {
 
   .services__container {
     margin-top: var(--margin-6);
+  }
+
+  .footer__container {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 @media only screen and (min-width: 60em) {
