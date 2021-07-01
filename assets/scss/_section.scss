@@ -2,6 +2,12 @@
   padding: 6.4rem 0 3.2rem;
   text-align: center;
 
+  &__container {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
   &__data {
     text-align: center;
   }
@@ -11,12 +17,19 @@
   }
 
   &__title {
+    font-family: "Oleo Script Swash Caps";
+    font-size: var(--icon-font-size);
+    color: var(--primary-color);
+    margin-bottom: var(--margin-1);
+  }
+
+  &__header {
     font-size: var(--h1-font-size);
     color: var(--title-color);
     margin-bottom: var(--margin-3);
   }
 
-  &__subtitle {
+  &__subheader {
     display: block;
     color: var(--primary-color);
     font-size: var(--h2-font-size);
@@ -24,7 +37,8 @@
     margin-bottom: var(--margin-1);
   }
 
-  &__image {
+  &__image,
+  &__image-left {
     width: 30rem;
     border-radius: 1rem;
     justify-self: center;

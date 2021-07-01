@@ -1,16 +1,10 @@
 @media only screen and (min-width: 36em) {
-  .home__container,
   .section__container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
   }
 
-  .section__image {
-    width: 38rem;
-    order: -1;
-  }
-
-  .section__image {
+  .section__image-left {
     width: 38rem;
     order: -1;
   }
@@ -43,10 +37,6 @@
 }
 
 @media only screen and (min-width: 60em) {
-  .home__image {
-    width: 50rem;
-  }
-
   .section__image {
     width: 50rem;
   }

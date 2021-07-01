@@ -240,33 +240,14 @@ img {
   }
 }
 
-.home__container {
-  height: calc(100vh - var(--header-height));
-  align-content: center;
-}
-.home__data {
-  text-align: center;
-}
-.home__title {
-  font-family: "Oleo Script Swash Caps";
-  font-size: var(--icon-font-size);
-  color: var(--primary-color);
-  margin-bottom: var(--margin-1);
-}
-.home__subtitle {
-  font-size: var(--h1-font-size);
-  color: var(--title-color);
-  margin-bottom: var(--margin-4);
-}
-.home__image {
-  width: 30rem;
-  border-radius: 1rem;
-  justify-self: center;
-}
-
 .section {
   padding: 6.4rem 0 3.2rem;
   text-align: center;
+}
+.section__container {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
 }
 .section__data {
   text-align: center;
@@ -275,18 +256,24 @@ img {
   margin-bottom: var(--margin-3);
 }
 .section__title {
+  font-family: "Oleo Script Swash Caps";
+  font-size: var(--icon-font-size);
+  color: var(--primary-color);
+  margin-bottom: var(--margin-1);
+}
+.section__header {
   font-size: var(--h1-font-size);
   color: var(--title-color);
   margin-bottom: var(--margin-3);
 }
-.section__subtitle {
+.section__subheader {
   display: block;
   color: var(--primary-color);
   font-size: var(--h2-font-size);
   font-weight: var(--weight-medium);
   margin-bottom: var(--margin-1);
 }
-.section__image {
+.section__image, .section__image-left {
   width: 30rem;
   border-radius: 1rem;
   justify-self: center;
@@ -361,18 +348,12 @@ img {
 }
 
 @media only screen and (min-width: 36em) {
-  .home__container,
-.section__container {
+  .section__container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
   }
 
-  .section__image {
-    width: 38rem;
-    order: -1;
-  }
-
-  .section__image {
+  .section__image-left {
     width: 38rem;
     order: -1;
   }
@@ -403,10 +384,6 @@ img {
   }
 }
 @media only screen and (min-width: 60em) {
-  .home__image {
-    width: 50rem;
-  }
-
   .section__image {
     width: 50rem;
   }
