@@ -44,7 +44,7 @@
   --shadow-dark: 0 0.4rem 0.4rem hsla(0, 100%, 100%, 0.4);
   --shadow-footer: 0 -0.4rem 0.4rem hsla(0, 0%, 100%, 0.4);
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 56em) {
   :root {
     --massive-font-size: 7.2rem;
     --h1-font-size: 3.6rem;
@@ -176,7 +176,7 @@ img {
   font-size: var(--h2-font-size);
   color: var(--primary-color);
 }
-@media only screen and (max-width: 56em) {
+@media only screen and (max-width: 55.9375em) {
   .header .nav__menu {
     flex-direction: column;
     justify-content: space-between;
@@ -265,7 +265,7 @@ img {
   height: 100%;
   margin: 0 auto;
 }
-@media only screen and (min-width: 36em) {
+@media only screen and (min-width: 56em) {
   .section__container, .section__services {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
@@ -276,7 +276,7 @@ img {
     margin-top: var(--margin-6);
   }
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 64em) {
   .section__container, .section__services {
     gap: 11.2rem;
   }
@@ -310,17 +310,17 @@ img {
   border-radius: 1rem;
   justify-self: center;
 }
-@media only screen and (min-width: 36em) {
+@media only screen and (min-width: 56em) and (max-width: 63.9375em) {
   .section__image-right, .section__image-left {
     width: 38rem;
   }
 }
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 64em) {
   .section__image-right, .section__image-left {
     width: 50rem;
   }
 }
-@media only screen and (min-width: 36em) {
+@media only screen and (min-width: 56em) {
   .section__image-left {
     order: -1;
   }
