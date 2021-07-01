@@ -8,6 +8,8 @@
   --text-color-light: hsl(0, 0%, 44%);
   --body-color: hsl(0, 0%, 95%);
   --container-color: hsl(0, 0%, 100%);
+  --shadow-light: 0 0.1rem 0.1rem hsla(0, 0%, 0%, 0.1);
+  --shadow-dark: 0 0.4rem 0.4rem hsla(0, 0%, 0%, 0.4);
   /* Typography */
   --font-family: "Poppins", Arial, Helvetica, sans-serif;
   --icon-font-size: 4.8rem;
@@ -37,6 +39,8 @@
   --text-color-light: hsl(0, 0%, 56%);
   --body-color: hsl(0, 0%, 5%);
   --container-color: hsl(0, 0%, 0%);
+  --shadow-light: 0 0.1rem 0.1rem hsla(0, 0%, 100%, 0.1);
+  --shadow-dark: 0 0.4rem 0.4rem hsla(0, 100%, 100%, 0.4);
 }
 
 @media only screen and (min-width: 48em) {
@@ -139,7 +143,7 @@ img {
 @media (hover: hover) and (pointer: fine) {
   .button:hover {
     transform: translateY(-0.5rem);
-    box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+    box-shadow: var(--shadow-dark);
   }
 }
 .button:active {
@@ -151,6 +155,12 @@ img {
   color: var(--text-color);
   font-size: var(--h1-font-size);
   cursor: pointer;
+  transition: 0.4s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .theme-button:hover {
+    color: var(--primary-color);
+  }
 }
 
 .scroll-top {
@@ -179,9 +189,10 @@ img {
   z-index: var(--z-fixed);
   background-color: var(--body-color);
   transition: 0.4s;
+  box-shadow: var(--shadow-light);
 }
 .header.scroll-header {
-  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+  box-shadow: var(--shadow-dark);
 }
 .header .nav {
   height: var(--header-height);
@@ -204,7 +215,7 @@ img {
     padding: 2.4rem 0 1.6rem;
     border-radius: 0 0 1.6rem 1.6rem;
     background-color: var(--body-color);
-    box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+    box-shadow: var(--shadow-dark);
     transition: 0.4s;
     z-index: var(--z-fixed);
   }
@@ -224,12 +235,33 @@ img {
 .header .nav__link {
   font-weight: var(--weight-medium);
   transition: 0.4s;
+  position: relative;
 }
 .header .nav__link:hover {
   color: var(--primary-color);
 }
 .header .nav__link.active {
   color: var(--primary-color);
+}
+@media only screen and (min-width: 48em) {
+  .header .nav__link.active::before {
+    width: 100%;
+    height: 0.5rem;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .header .nav__link::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -1.9rem;
+    width: 100%;
+    height: 0;
+    background-color: var(--primary-color);
+    transition: 0.4s;
+    transform-origin: bottom;
+    border-radius: 1rem 1rem 0 0;
+  }
 }
 
 .home__container {

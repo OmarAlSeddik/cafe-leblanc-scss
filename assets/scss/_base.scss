@@ -9,13 +9,20 @@
   --body-color: hsl(0, 0%, 95%);
   --container-color: hsl(0, 0%, 100%);
 
+  --shadow-light: 0 0.1rem 0.1rem hsla(0, 0%, 0%, 0.1);
+  --shadow-dark: 0 0.4rem 0.4rem hsla(0, 0%, 0%, 0.4);
+
   body.dark-theme {
     --primary-color: hsl(22, 34%, 67%);
+
     --title-color: hsl(0, 0%, 78%);
     --text-color: hsl(0, 0%, 67%);
     --text-color-light: hsl(0, 0%, 56%);
     --body-color: hsl(0, 0%, 5%);
     --container-color: hsl(0, 0%, 0%);
+
+    --shadow-light: 0 0.1rem 0.1rem hsla(0, 0%, 100%, 0.1);
+    --shadow-dark: 0 0.4rem 0.4rem hsla(0, 100%, 100%, 0.4);
   }
 
   /* Typography */

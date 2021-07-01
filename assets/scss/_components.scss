@@ -51,7 +51,7 @@
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       transform: translateY(-0.5rem);
-      box-shadow: 0 0.4rem 0.4rem hsla(0, 0, 0, 0.4);
+      box-shadow: var(--shadow-dark);
     }
   }
 
@@ -65,4 +65,10 @@
   color: var(--text-color);
   font-size: var(--h1-font-size);
   cursor: pointer;
+  transition: 0.4s;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
 }
