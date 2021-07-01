@@ -1,0 +1,42 @@
+.section {
+  padding: 6.4rem 0 3.2rem;
+  text-align: center;
+
+  &__data {
+    text-align: center;
+  }
+
+  &__description {
+    margin-bottom: var(--margin-3);
+  }
+
+  &__title {
+    font-size: var(--h1-font-size);
+    color: var(--title-color);
+    margin-bottom: var(--margin-3);
+  }
+
+  &__subtitle {
+    display: block;
+    color: var(--primary-color);
+    font-size: var(--h2-font-size);
+    font-weight: var(--weight-medium);
+    margin-bottom: var(--margin-1);
+  }
+
+  &__image {
+    width: 30rem;
+    border-radius: 1rem;
+    justify-self: center;
+  }
+
+  &__stores {
+    flex-direction: column;
+    justify-self: center;
+  }
+
+  &__store {
+    width: 30rem;
+    margin: var(--margin-2);
+  }
+}

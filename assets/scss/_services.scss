@@ -1,0 +1,23 @@
+.services {
+  &__container {
+    row-gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__image {
+    width: 6.4rem;
+    height: 6.4rem;
+    fill: var(--primary-color);
+    margin-bottom: var(--margin-2);
+  }
+
+  &__title {
+    font-size: var(--h3-font-size);
+    color: var(--title-color);
+    margin-bottom: var(--margin-1);
+  }
+}

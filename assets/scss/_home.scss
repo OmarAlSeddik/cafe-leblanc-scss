@@ -1,0 +1,29 @@
+.home {
+  &__container {
+    height: calc(100vh - var(--header-height));
+    align-content: center;
+  }
+
+  &__data {
+    text-align: center;
+  }
+
+  &__title {
+    font-family: "Oleo Script Swash Caps";
+    font-size: var(--icon-font-size);
+    color: var(--primary-color);
+    margin-bottom: var(--margin-1);
+  }
+
+  &__subtitle {
+    font-size: var(--h1-font-size);
+    color: var(--title-color);
+    margin-bottom: var(--margin-4);
+  }
+
+  &__image {
+    width: 30rem;
+    border-radius: 1rem;
+    justify-self: center;
+  }
+}

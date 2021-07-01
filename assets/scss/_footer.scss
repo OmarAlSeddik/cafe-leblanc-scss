@@ -1,0 +1,54 @@
+.footer {
+  &__container {
+    flex-direction: column;
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__logo {
+    font-family: "Oleo Script Swash Caps";
+    font-size: var(--h2-font-size);
+    color: var(--primary-color);
+  }
+
+  &__title {
+    margin-top: var(--margin-4);
+  }
+
+  &__description {
+    display: block;
+    font-size: var(--small-font-size);
+    margin: 0.4rem 0 var(--margin-3);
+  }
+
+  &__list {
+    flex-direction: column;
+  }
+
+  &__link {
+    transition: 0.4s;
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  &__social {
+    font-size: var(--h1-font-size);
+    color: var(--title-color);
+    margin-right: var(--margin-2);
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  &__copy {
+    text-align: center;
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+    margin-top: var(--margin-6);
+  }
+}

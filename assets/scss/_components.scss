@@ -1,26 +1,3 @@
-.section {
-  padding: 6.4rem 0 3.2rem;
-}
-
-.section-title,
-.section-subtitle {
-  text-align: center;
-}
-
-.section-title {
-  font-size: var(--h1-font-size);
-  color: var(--title-color);
-  margin-bottom: var(--margin-3);
-}
-
-.section-subtitle {
-  display: block;
-  color: var(--primary-color);
-  font-size: var(--h2-font-size);
-  font-weight: var(--weight-medium);
-  margin-bottom: var(--margin-1);
-}
-
 .container {
   width: 90%;
   height: 100%;
@@ -69,6 +46,26 @@
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       color: var(--primary-color);
+    }
+  }
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: -6rem;
+  right: 5rem;
+  font-size: var(--icon-font-size);
+  color: var(--primary-color);
+  z-index: var(--z-tooltip);
+  transition: 0.4s;
+
+  &.visible {
+    bottom: 5rem;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      opacity: 0.5;
     }
   }
 }
