@@ -41,8 +41,8 @@
     font-size: var(--h1-font-size);
     color: var(--title-color);
     margin-right: var(--margin-2);
-    @media (hover: hover) and (pointer: fine) {
-      &:hover {
+    &:hover {
+      @media (hover: hover) and (pointer: fine) {
         color: var(--primary-color);
       }
     }

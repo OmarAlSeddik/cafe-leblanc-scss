@@ -22,7 +22,7 @@ const scrollActive = () => {
   sections.forEach((section) => {
     const sectionId = section.getAttribute("id");
     const sectionHeight = section.offsetHeight;
-    const sectionTop = section.offsetTop - 100;
+    const sectionTop = section.offsetTop - 350;
 
     this.scrollY >= sectionTop && this.scrollY < sectionTop + sectionHeight
       ? document
@@ -95,7 +95,7 @@ const sr = ScrollReveal({
 });
 
 sr.reveal(
-  `.section__data, .section__image-right, .section__image-left, .section__stores, .section__service, .footer__content`,
+  `.section__data, .section__image-right, .section__image-left, .section__stores, .section__service`,
   {
     interval: 160,
   }

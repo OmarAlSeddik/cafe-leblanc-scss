@@ -22,8 +22,8 @@
       color: var(--primary-color);
     }
 
-    @media only screen and (max-width: 50em) {
-      &__menu {
+    &__menu {
+      @media only screen and (max-width: 56em) {
         flex-direction: column;
         justify-content: space-between;
         position: fixed;
@@ -42,6 +42,12 @@
           top: 7.4rem;
         }
       }
+
+      @media only screen and (min-width: 56em) {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 60rem;
+      }
     }
 
     &__item {
@@ -53,6 +59,10 @@
       font-weight: var(--weight-medium);
       cursor: pointer;
       color: var(--text-color);
+
+      @media only screen and (min-width: 56em) {
+        display: none;
+      }
     }
 
     &__link {
@@ -66,15 +76,16 @@
 
       &.active {
         color: var(--primary-color);
-        @media only screen and (min-width: 50em) {
-          &::before {
+        &::before {
+          @media only screen and (min-width: 56em) {
             width: 100%;
             height: 0.5rem;
           }
         }
       }
-      @media only screen and (min-width: 50em) {
-        &::before {
+
+      &::before {
+        @media only screen and (min-width: 56em) {
           content: "";
           display: block;
           position: absolute;

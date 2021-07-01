@@ -19,8 +19,8 @@
   border-radius: var(--h2-font-size);
   transition: 0.4s;
 
-  @media (hover: hover) and (pointer: fine) {
-    &:hover {
+  &:hover {
+    @media (hover: hover) and (pointer: fine) {
       transform: translateY(-0.5rem);
       box-shadow: var(--shadow-dark);
     }
@@ -37,8 +37,8 @@
   font-size: var(--h1-font-size);
   cursor: pointer;
   transition: 0.4s;
-  @media (hover: hover) and (pointer: fine) {
-    &:hover {
+  &:hover {
+    @media (hover: hover) and (pointer: fine) {
       color: var(--primary-color);
     }
   }
@@ -57,8 +57,8 @@
     bottom: 5rem;
   }
 
-  @media (hover: hover) and (pointer: fine) {
-    &:hover {
+  &:hover {
+    @media (hover: hover) and (pointer: fine) {
       opacity: 0.5;
     }
   }

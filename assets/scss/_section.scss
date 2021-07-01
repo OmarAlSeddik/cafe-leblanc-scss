@@ -1,6 +1,9 @@
 .section {
   padding: 6.4rem 0 3.2rem;
   text-align: center;
+  @media only screen and (min-width: 56em) {
+    padding-top: 12.8rem;
+  }
 
   &__container,
   &__services {
@@ -9,6 +12,16 @@
     width: 90%;
     height: 100%;
     margin: 0 auto;
+    @media only screen and (min-width: 36em) {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+    @media only screen and (min-width: 56em) {
+      margin-top: var(--margin-6);
+    }
+    @media only screen and (min-width: 60em) {
+      gap: 11.2rem;
+    }
   }
 
   &__data {
@@ -45,6 +58,18 @@
     width: 30rem;
     border-radius: 1rem;
     justify-self: center;
+    @media only screen and (min-width: 36em) {
+      width: 38rem;
+    }
+    @media only screen and (min-width: 60em) {
+      width: 50rem;
+    }
+  }
+
+  &__image-left {
+    @media only screen and (min-width: 36em) {
+      order: -1;
+    }
   }
 
   &__services {
