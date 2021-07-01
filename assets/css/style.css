@@ -94,7 +94,6 @@ img {
   width: 90%;
   height: 100%;
   margin: 0 auto;
-  overflow: auto;
 }
 
 .flex {
@@ -292,6 +291,21 @@ img {
   border-radius: 1rem;
   justify-self: center;
 }
+.section__services {
+  row-gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+}
+.section__service-image {
+  width: 6.4rem;
+  height: 6.4rem;
+  fill: var(--primary-color);
+  margin-bottom: var(--margin-2);
+}
+.section__service-title {
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--margin-1);
+}
 .section__stores {
   flex-direction: column;
   justify-self: center;
@@ -299,25 +313,6 @@ img {
 .section__store {
   width: 30rem;
   margin: var(--margin-2);
-}
-
-.services__container {
-  row-gap: 4rem;
-  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-}
-.services__content {
-  text-align: center;
-}
-.services__image {
-  width: 6.4rem;
-  height: 6.4rem;
-  fill: var(--primary-color);
-  margin-bottom: var(--margin-2);
-}
-.services__title {
-  font-size: var(--h3-font-size);
-  color: var(--title-color);
-  margin-bottom: var(--margin-1);
 }
 
 .footer__container {
@@ -367,22 +362,17 @@ img {
 
 @media only screen and (min-width: 36em) {
   .home__container,
-.about__container,
-.app__container,
-.contact__container,
 .section__container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
   }
 
-  .about__image,
-.section__image {
+  .section__image {
     width: 38rem;
     order: -1;
   }
 
-  .contact__image,
-.section__image {
+  .section__image {
     width: 38rem;
     order: -1;
   }
@@ -402,7 +392,8 @@ img {
     display: none;
   }
 
-  .services__container {
+  .section__container,
+.section__services {
     margin-top: var(--margin-6);
   }
 
@@ -416,18 +407,11 @@ img {
     width: 50rem;
   }
 
-  .about__image,
-.section__image {
+  .section__image {
     width: 50rem;
   }
 
-  .contact__image,
-.section__image {
-    width: 50rem;
-  }
-
-  .about__container,
-.section__container {
+  .section__container {
     gap: 11.2rem;
   }
 }/*# sourceMappingURL=style.css.map */

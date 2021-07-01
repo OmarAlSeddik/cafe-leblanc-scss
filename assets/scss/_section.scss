@@ -30,6 +30,24 @@
     justify-self: center;
   }
 
+  &__services {
+    row-gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  }
+
+  &__service-image {
+    width: 6.4rem;
+    height: 6.4rem;
+    fill: var(--primary-color);
+    margin-bottom: var(--margin-2);
+  }
+
+  &__service-title {
+    font-size: var(--h3-font-size);
+    color: var(--title-color);
+    margin-bottom: var(--margin-1);
+  }
+
   &__stores {
     flex-direction: column;
     justify-self: center;

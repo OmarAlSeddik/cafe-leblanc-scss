@@ -1,20 +1,15 @@
 @media only screen and (min-width: 36em) {
   .home__container,
-  .about__container,
-  .app__container,
-  .contact__container,
   .section__container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
   }
 
-  .about__image,
   .section__image {
     width: 38rem;
     order: -1;
   }
 
-  .contact__image,
   .section__image {
     width: 38rem;
     order: -1;
@@ -36,7 +31,8 @@
     display: none;
   }
 
-  .services__container {
+  .section__container,
+  .section__services {
     margin-top: var(--margin-6);
   }
 
@@ -51,17 +47,10 @@
     width: 50rem;
   }
 
-  .about__image,
   .section__image {
     width: 50rem;
   }
 
-  .contact__image,
-  .section__image {
-    width: 50rem;
-  }
-
-  .about__container,
   .section__container {
     gap: 11.2rem;
   }
