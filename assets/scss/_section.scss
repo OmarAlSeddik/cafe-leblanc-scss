@@ -2,7 +2,10 @@
   padding: 6.4rem 0 3.2rem;
   text-align: center;
 
-  &__container {
+  &__container,
+  &__services {
+    display: grid;
+    gap: 2.4rem;
     width: 90%;
     height: 100%;
     margin: 0 auto;
@@ -23,13 +26,13 @@
     margin-bottom: var(--margin-1);
   }
 
-  &__header {
+  &__heading {
     font-size: var(--h1-font-size);
     color: var(--title-color);
     margin-bottom: var(--margin-3);
   }
 
-  &__subheader {
+  &__subheading {
     display: block;
     color: var(--primary-color);
     font-size: var(--h2-font-size);
@@ -37,7 +40,7 @@
     margin-bottom: var(--margin-1);
   }
 
-  &__image,
+  &__image-right,
   &__image-left {
     width: 30rem;
     border-radius: 1rem;

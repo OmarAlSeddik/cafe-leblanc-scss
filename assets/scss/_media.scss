@@ -4,6 +4,10 @@
     align-items: center;
   }
 
+  .section__image-right {
+    width: 38rem;
+  }
+
   .section__image-left {
     width: 38rem;
     order: -1;
@@ -29,15 +33,11 @@
   .section__services {
     margin-top: var(--margin-6);
   }
-
-  .footer__container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
 }
 
 @media only screen and (min-width: 60em) {
-  .section__image {
+  .section__image-right,
+  .section__image-left {
     width: 50rem;
   }
 

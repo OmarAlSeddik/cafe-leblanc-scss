@@ -10,6 +10,7 @@
   --container-color: hsl(0, 0%, 100%);
   --shadow-light: 0 0.1rem 0.1rem hsla(0, 0%, 0%, 0.1);
   --shadow-dark: 0 0.4rem 0.4rem hsla(0, 0%, 0%, 0.4);
+  --shadow-footer: 0 -0.4rem 0.4rem hsla(0, 0%, 0%, 0.4);
   /* Typography */
   --font-family: "Poppins", Arial, Helvetica, sans-serif;
   --icon-font-size: 4.8rem;
@@ -41,6 +42,7 @@
   --container-color: hsl(0, 0%, 0%);
   --shadow-light: 0 0.1rem 0.1rem hsla(0, 0%, 100%, 0.1);
   --shadow-dark: 0 0.4rem 0.4rem hsla(0, 100%, 100%, 0.4);
+  --shadow-footer: 0 -0.4rem 0.4rem hsla(0, 0%, 100%, 0.4);
 }
 
 @media only screen and (min-width: 48em) {
@@ -101,11 +103,6 @@ img {
   justify-content: center;
   align-items: center;
   align-content: center;
-}
-
-.grid {
-  display: grid;
-  gap: 2.4rem;
 }
 
 .button {
@@ -244,7 +241,9 @@ img {
   padding: 6.4rem 0 3.2rem;
   text-align: center;
 }
-.section__container {
+.section__container, .section__services {
+  display: grid;
+  gap: 2.4rem;
   width: 90%;
   height: 100%;
   margin: 0 auto;
@@ -261,19 +260,19 @@ img {
   color: var(--primary-color);
   margin-bottom: var(--margin-1);
 }
-.section__header {
+.section__heading {
   font-size: var(--h1-font-size);
   color: var(--title-color);
   margin-bottom: var(--margin-3);
 }
-.section__subheader {
+.section__subheading {
   display: block;
   color: var(--primary-color);
   font-size: var(--h2-font-size);
   font-weight: var(--weight-medium);
   margin-bottom: var(--margin-1);
 }
-.section__image, .section__image-left {
+.section__image-right, .section__image-left {
   width: 30rem;
   border-radius: 1rem;
   justify-self: center;
@@ -302,8 +301,16 @@ img {
   margin: var(--margin-2);
 }
 
+.footer {
+  padding: 6.4rem 0 3.2rem;
+  box-shadow: var(--shadow-footer);
+}
 .footer__container {
-  flex-direction: column;
+  display: grid;
+  gap: 2.4rem;
+  align-items: center;
+  row-gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
 }
 .footer__content {
   text-align: center;
@@ -312,9 +319,6 @@ img {
   font-family: "Oleo Script Swash Caps";
   font-size: var(--h2-font-size);
   color: var(--primary-color);
-}
-.footer__title {
-  margin-top: var(--margin-4);
 }
 .footer__description {
   display: block;
@@ -353,6 +357,10 @@ img {
     align-items: center;
   }
 
+  .section__image-right {
+    width: 38rem;
+  }
+
   .section__image-left {
     width: 38rem;
     order: -1;
@@ -377,14 +385,10 @@ img {
 .section__services {
     margin-top: var(--margin-6);
   }
-
-  .footer__container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
 }
 @media only screen and (min-width: 60em) {
-  .section__image {
+  .section__image-right,
+.section__image-left {
     width: 50rem;
   }
 

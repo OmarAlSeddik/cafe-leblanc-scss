@@ -90,13 +90,13 @@ themeButton.addEventListener("click", () => {
 const sr = ScrollReveal({
   origin: "top",
   distance: "5rem",
-  duration: 2000,
+  duration: 1600,
   reset: true,
 });
 
 sr.reveal(
-  `.section__data, .section__image, .section__image-left, .section__stores, .section__service, .footer__content`,
+  `.section__data, .section__image-right, .section__image-left, .section__stores, .section__service, .footer__content`,
   {
-    interval: 200,
+    interval: 160,
   }
 );
