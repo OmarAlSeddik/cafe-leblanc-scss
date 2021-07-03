@@ -86,17 +86,9 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
 
-//ScrollReveal
-const sr = ScrollReveal({
-  origin: "top",
-  distance: "5rem",
-  duration: 1600,
-  reset: true,
+//Animate on Scroll Library
+AOS.init({
+  duration: 1000,
+  easing: "ease-in-out",
+  offset: -50,
 });
-
-sr.reveal(
-  `.section__data, .section__image-right, .section__image-left, .section__stores, .section__service`,
-  {
-    interval: 160,
-  }
-);
