@@ -90,5 +90,5 @@ themeButton.addEventListener("click", () => {
 AOS.init({
   duration: 1000,
   easing: "ease-in-out",
-  offset: -50,
+  offset: 200,
 });
